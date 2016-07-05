@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<meta charset="ISO-8859-1">
+
+<div ng-init="loadComments()">
+
+	<div class="jumbotron">
+	  <h3>{{goal.goalName}}</h3>
+	  
+	  <p>
+		<textarea placeholder="Your comment" maxlength="200" cols="50" ng-model="comments.commentDescription" required></textarea>
+	  </p>
+	  
+	  	<a class="btn btn-warning btn-lg" href="" ng-click="addPost(goal)" role="button">Post</a>
+	  
+	  <hr/>
+	  
+	</div>
+	
+	  <ul>
+	  
+	  	<li ng-repeat="c in goal.comments">
+	  		{{c.commentDescription}} - <span class="glyphicon glyphicon-calendar"></span> Posted on {{c.comentDate | date:'dd/MM/yyyy'}}
+	  		<hr />
+	  	</li>
+	  
+	  </ul>
+</div>
+

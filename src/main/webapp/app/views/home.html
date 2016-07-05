@@ -1,0 +1,32 @@
+<div class="row" ng-controller="GoalController">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+
+                <h1 class="page-header">
+                    My
+                    <small>Bucket List</small>
+                </h1>
+
+			<div ui-view></div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="well">
+                    <h4>Find your list</h4>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email" ng-model="email" required>
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="search(email)">
+                                <span class="glyphicon glyphicon-search"></span>
+                        	</button>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+

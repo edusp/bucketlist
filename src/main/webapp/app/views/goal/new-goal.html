@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<meta charset="ISO-8859-1">
+
+
+<form class="form-horizontal" role="form" ng-submit="save(user)">
+
+	<div class="form-group">
+  		<label class="col-lg-2 control-label">Goal</label>
+		<div class="col-lg-5">
+		
+	    	<input type="text" class="form-control" id="goals" name="goalName" ng-model="user.goals.goalName" placeholder="Your Goal" required>
+	  	</div>
+	</div>
+  
+	<div class="form-group">
+	  <label class="col-lg-2 control-label">Email</label>
+	  <div class="col-lg-5">
+	    
+    	<input type="email" class="form-control" id="email" name="email" ng-model="user.email" placeholder="Email" required>
+	  </div>
+	</div>
+	
+	<div class="form-group">
+	  <label class="col-lg-2 control-label">Category</label>
+	  <div class="col-lg-2">
+	    <select name="category" class="form-control" ng-model="user.goals.category" required id="categories">
+	    <option value="" >Select</option>
+	    	<option ng-repeat="c in categories" value="{{c.key}}" >{{c.value}}</option>
+	    </select>
+	    
+	  </div>
+	</div>
+	
+	<div class="form-group">
+	  <label class="col-lg-2 control-label">Due Date</label>
+	  <div class="col-lg-3">
+	    
+	    <input type="date" class="form-control" id="dueDate" name="dueDate" ng-model="user.goals.dueDate" placeholder="Due Date" required>
+	  </div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-lg-2 control-label">Description</label>
+		<div class="col-lg-5">
+		
+			<textarea name="commentDescription" class="form-control" ng-model="user.goals.comments.commentDescription" rows="5" cols="5" maxlength="200"></textarea>
+		</div>
+	</div>
+	
+ <!--  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-5">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> No cerrar sesión
+        </label>
+      </div>
+    </div>
+  </div> -->
+  
+  
+	  <div class="form-group">
+	    <div class="col-lg-offset-2 col-lg-10">
+	      <button type="submit" class="btn btn-default">Entrar</button>
+	    </div>
+	  </div>
+</form>
